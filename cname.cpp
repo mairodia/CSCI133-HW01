@@ -55,3 +55,34 @@ void CName::WriteFullName() const
 	}
 	cout << endl;
 }
+// == istream ==============================================================================
+// Overloads the >> operator
+//
+// Input:
+// 	inStream [IN/OUT] -- input stream
+//	ths [IN] -- CName object
+//
+// Output:
+//	inStream
+// ==========================================================================================
+istream& operator>>(istream &inStream, CName &rhs)
+{
+	inStream >> rhs.m_first >> rhs.m_last;
+	return inStream;
+}
+
+// == ostream ===============================================================================
+// Overloads the << operator
+//
+// Input:
+//	outStream [IN/OUT] -- output stream
+//	rhs [IN] -- CName object
+//
+// Output:
+// 	outStream
+// ==========================================================================================
+ostream& operator<<(ostream &outStream, const CName &rhs)
+{
+	outStream << rhs.m_first << " " << rhs.m_last;
+	return outStream;
+}
