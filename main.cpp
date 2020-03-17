@@ -25,7 +25,7 @@ int     main()
 	//display the contents of each newly-constructed object...
 	//should see "Robert Bresson"
 	cout << "nameOne = ";
-	nameONe.WriteFullName();
+	nameOne.WriteFullName();
 	cout << endl;
 	
 	// should see "Robert Bresson" again
